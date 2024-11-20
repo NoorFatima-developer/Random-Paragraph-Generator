@@ -1,20 +1,39 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Random Paragraph Generator</title>
-    <script src="https://kit.fontawesome.com/59af6d82c4.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <script
+      src="https://kit.fontawesome.com/59af6d82c4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <div class="container">
-        <input type="number" name="" id="num-input" value="5" class="value">
-        <select id="opt-input" class="value">
+      <form action="#">
+        <div class="header">
+          <input type="number" name="" id="num-input" value="5" class="value" />
+          <select id="opt-input" class="value">
             <option value="paras">Paragraph</option>
             <option value="sentences">Sentences</option>
-        </select>
+          </select>
+          <button class="btn" id="gen-btn">Generate</button>
+          <button class="btn" id="copy-btn">
+            <span>Copy</span><i class="fa-solid fa-copy"></i>
+          </button>
+        </div>
+      </form>
 
-        <button class="btn" id="gen-btn">Generate</button>
-        <button class="btn" id="copy-btn"><span>Copy</span><i class="fa-solid fa-copy"></i></button>
+      <div class="gen-body">
+        <div class="gen-content">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Reprehenderit, ratione quibusdam. Alias aperiam natus possimus maiores
+          recusandae voluptatibus iure autem sapiente aliquid similique,
+          laboriosam voluptatem officiis deserunt veniam dicta? Ea molestiae
+          quibusdam quasi voluptas non. Deleniti illo commodi modi possimus
+          dicta labore nostrum quos nobis?
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
