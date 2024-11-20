@@ -85,3 +85,48 @@ body {
     background-color: #cd6175;
     border-radius: 5px;
 }
+
+@media (max-width: 1200px) and (min-width: 700px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .header {
+        flex-direction: row; 
+        justify-content: center; 
+        gap: 10px;
+    }
+
+    .btn, .value {
+        font-size: 1.1rem; 
+    }
+
+    .gen-content {
+        font-size: 1.1rem; 
+    }
+
+}
+
+
+@media (max-width: 800px) {
+    .container {
+        width: 95%; 
+    }
+
+    .header {
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .btn, .value {
+        font-size: 1rem; 
+        text-align: center; 
+    }
+
+    .gen-content {
+        font-size: 1rem;
+    }
+}
