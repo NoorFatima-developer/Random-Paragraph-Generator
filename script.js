@@ -23,7 +23,7 @@ async function fetchCounter(Url) {
     if(response.status === 200){
         let data = await response.json();
         displayData(data);
-        // console.log(data);
+        console.log(data);
     }
 }
 
