@@ -4,15 +4,15 @@ const inputOpt = document.querySelector("#opt-input");
 const genBtn = document.querySelector("#gen-btn");
 const copyBtn = document.querySelector("#copy-btn");
 
-let count = 5; inputOpt = "paras"
+let count = 5; options = "paras"
 genBtn.addEventListener("click", function(){
-        getValues()
+        getValues();
     
 });
 
 function getValues() {
     count = inputNum.value;
     options = inputOpt.value;
-    console.log(count, options);
+    // console.log(count, options);
     
 }
