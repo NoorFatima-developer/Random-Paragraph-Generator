@@ -8,17 +8,23 @@ const copyBtn = document.querySelector("#copy-btn");
 
 let count = 5; options = "paras"; tempCount = 0;
 genBtn.addEventListener("click", function(){
+    // ye line value ko update krygi lkin oska use tb zrori hai jb oper count ki value set na o...jesy oper 5 di hai aghr na deti tu ye below line imp thie...
+    count = inputNum.value.trim()
+    if (ValidateValue())
+    {
         getValues();
-        ValidateValue();
-    
+
+    }
 });
 
 function getValues() {
     count = inputNum.value;
     options = inputOpt.value;
-    // console.log(count, options);
+  
     url = `https://baconipsum.com/api/?type=meat-and-filler&${options}=${count}&start-with-lorem=1`
     fetchCounter(url)
+    
+    
 }
 
 async function fetchCounter(Url) {
@@ -43,20 +49,27 @@ function ValidateValue(){
     if(count > 100){
         invalidInput()
         count = 100;
-        inputNum.value = "100";
+        inputNum.value = "";
+        genContent.innerHTML = ""
+        return false;
     }else if(count < 1 || isNaN(count)){
         invalidInput()
         count = 5;
-        inputNum.value = "5";
+        inputNum.value = "";
+        genContent.innerHTML = ""
+
+        return false;
     }
+    return true;
 }
 
 function invalidInput() {
     inputNum.style.borderColor = "red";
+    inputNum.placeholder = "Invalid input!"   
 
     setTimeout(() => {
         inputNum.style.borderColor = "#d3deb4";
-    }, 5000);
+    }, 1000);
 }
 
 // Copy to clipboard function
