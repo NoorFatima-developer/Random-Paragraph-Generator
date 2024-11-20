@@ -2,10 +2,11 @@
 const inputNum = document.querySelector("#num-input");
 const inputOpt = document.querySelector("#opt-input");
 const genBtn = document.querySelector("#gen-btn");
-const copyBtn = document.querySelector("#copy-btn");
 const genContent = document.querySelector(".gen-content");
+const copyBtn = document.querySelector("#copy-btn");
 
-let count = 5; options = "paras"
+
+let count = 5; options = "paras"; tempCount = 0;
 genBtn.addEventListener("click", function(){
         getValues();
         ValidateValue();
@@ -38,7 +39,7 @@ function displayData(data) {
 }
 
 function ValidateValue(){
-    
+    tempCount = "";
     if(count > 100){
         invalidInput()
         count = 100;
@@ -52,7 +53,19 @@ function ValidateValue(){
 
 function invalidInput() {
     inputNum.style.borderColor = "red";
+
+    setTimeout(() => {
+        inputNum.style.borderColor = "#d3deb4";
+    }, 5000);
 }
+
+// Copy to clipboard function
+
+copyBtn.addEventListener("click",()=>{
+    let copytext = genContent.textContent;
+    navigator.clipboard.writeText(copytext);
+})
+
 
 // NOTE:
 // async wait promise return krta hai and jb async use hota hai tu hum await ka use krty hain or jahan hum await lagaty hain oska
