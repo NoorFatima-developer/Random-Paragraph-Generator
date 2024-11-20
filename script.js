@@ -13,4 +13,6 @@ genBtn.addEventListener("click", function(){
 function getValues() {
     count = inputNum.value;
     options = inputOpt.value;
+    console.log(count, options);
+    
 }
