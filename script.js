@@ -13,7 +13,7 @@ genBtn.addEventListener("click", function(){
 function getValues() {
     count = inputNum.value;
     options = inputOpt.value;
-    console.log(count, options);
-    url = "https://baconipsum.com/api/?type=meat-and-filler`${count}&${options}`&format=text"
+    // console.log(count, options);
+    url = `https://baconipsum.com/api/?type=meat-and-filler&${options}=${count}&format=text`
     
 }
