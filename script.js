@@ -5,15 +5,11 @@ const genBtn = document.querySelector("#gen-btn");
 const genContent = document.querySelector(".gen-content");
 const copyBtn = document.querySelector("#copy-btn");
 
-
-let count = 5; options = "paras"; tempCount = 0;
+let count = 5; options = "paras"; 
 genBtn.addEventListener("click", function(){
-    // ye line value ko update krygi lkin oska use tb zrori hai jb oper count ki value set na o...jesy oper 5 di hai aghr na deti tu ye below line imp thie...
     count = inputNum.value.trim()
-    if (ValidateValue())
-    {
+    if (ValidateValue()){
         getValues();
-
     }
 });
 
@@ -23,8 +19,6 @@ function getValues() {
   
     url = `https://baconipsum.com/api/?type=meat-and-filler&${options}=${count}&start-with-lorem=1`
     fetchCounter(url)
-    
-    
 }
 
 async function fetchCounter(Url) {
@@ -45,7 +39,6 @@ function displayData(data) {
 }
 
 function ValidateValue(){
-    tempCount = "";
     if(count > 100){
         invalidInput()
         count = 100;
@@ -57,7 +50,6 @@ function ValidateValue(){
         count = 5;
         inputNum.value = "";
         genContent.innerHTML = ""
-
         return false;
     }
     return true;
@@ -78,7 +70,6 @@ copyBtn.addEventListener("click",()=>{
     let copytext = genContent.textContent;
     navigator.clipboard.writeText(copytext);
 })
-
 
 // NOTE:
 // async wait promise return krta hai and jb async use hota hai tu hum await ka use krty hain or jahan hum await lagaty hain oska
