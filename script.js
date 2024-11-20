@@ -8,6 +8,7 @@ const genContent = document.querySelector(".gen-content");
 let count = 5; options = "paras"
 genBtn.addEventListener("click", function(){
         getValues();
+        ValidateValue();
     
 });
 
@@ -47,6 +48,10 @@ function ValidateValue(){
         count = 5;
         inputNum.value = "5";
     }
+}
+
+function invalidInput() {
+    inputNum.style.borderColor = "red";
 }
 
 // NOTE:
