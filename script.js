@@ -25,6 +25,8 @@ async function fetchCounter(Url) {
         let data = await response.json();
         displayData(data);
         console.log(data);
+    }else {
+        alert("An error occurred while fetching data")
     }
 }
 
@@ -32,6 +34,19 @@ function displayData(data) {
     let texts = "";
     texts = data.join("<br><br>")
     genContent.innerHTML = texts;
+}
+
+function ValidateValue(){
+    
+    if(count > 100){
+        invalidInput()
+        count = 100;
+        inputNum.value = "100";
+    }else if(count < 1 || isNaN(count)){
+        invalidInput()
+        count = 5;
+        inputNum.value = "5";
+    }
 }
 
 // NOTE:
