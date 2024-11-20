@@ -3,6 +3,7 @@ const inputNum = document.querySelector("#num-input");
 const inputOpt = document.querySelector("#opt-input");
 const genBtn = document.querySelector("#gen-btn");
 const copyBtn = document.querySelector("#copy-btn");
+const genContent = document.querySelector(".gen-content");
 
 let count = 5; options = "paras"
 genBtn.addEventListener("click", function(){
@@ -30,6 +31,7 @@ async function fetchCounter(Url) {
 function displayData(data) {
     let texts = "";
     texts = data.join("<br><br>")
+    genContent.innerHTML = texts;
 }
 
 // NOTE:
