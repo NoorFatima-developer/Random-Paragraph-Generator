@@ -1,4 +1,4 @@
-"# Random-Paragraph-Generator" 
+# Random-Paragraph-Generator
 
 Click below to view Live Preview:👇
 https://noorfatima-developer.github.io/Random-Paragraph-Generator/
